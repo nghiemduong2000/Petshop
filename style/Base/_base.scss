@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $ff-primary;
+    color: $cl-gray;
+}
+
+.container {
+    @include respond(tablet) {
+        padding: 0;
+    }
+}

@@ -1,34 +1,159 @@
+@import '../Abstracts/mixin';
+
 .header {
     &__top {
-
+        display: flex;
+        padding: 2rem 0;
+        align-items: center;
+        @include respond(tablet){
+            justify-content: space-between;
+            padding: 2rem 1rem;
+        }
     }
     &__logo {
-
+        margin-right: 5rem;
+        @include respond(tablet) {
+            margin-right: 0;
+        }
+        a {
+            text-decoration: none;
+            img {
+                height: 3rem;
+                @include respond(phone) {
+                    height: 2.4rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
     }
     &__search {
+        border: 1px solid $cl-primary;
+        border-radius: .8rem;
+        overflow: hidden;
+        flex: 1;
+        @include respond(tablet) {
+            display: none;
+        }
+        &-wrap {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1rem;
+                color: $cl-white;
+            }
+        }
         form {
+            display: flex;
+            align-items: center;
             select {
-
+                cursor: pointer;
+                padding: 1rem;
+                border: none;
+                background-color: $cl-primary;
+                font-family: $ff-primary;
+                font-weight: 600;
+                color: $cl-white;
+                font-size: 1.4rem;
+                position: relative;
+                -moz-appearance: none;
+                /* for Chrome */
+                -webkit-appearance: none;
+                option {
+                    background-color: $cl-white;
+                    color: $cl-primary;
+                }
+                
+            }
+            /* For IE10 */
+            select::-ms-expand {
+                display: none;
             }
             input {
-
+                padding: 1rem;
+                border: none;
+                font-size: 1.4rem;
+                font-family: $ff-primary;
+                flex: 1;
+                outline: none;
             }
-            span {
+            .header__search-icon {
+                margin-right: 1rem;
                 i {
-
+                    font-size: 1.4rem;
+                    color: $cl-primary;
                 }
             }
         }
     }
     &__account {
-
+        margin-left: 5rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid $cl-primary;
+        padding: .7rem 1rem;
+        border-radius: .6rem;
+        cursor: pointer;
+        @include respond(tablet) {
+            display: none;
+        }
+        i {
+            font-size: 2.2rem;
+            color: $cl-primary;
+            margin-right: 1rem;
+        }
+        p {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 0;
+        }
+        &:hover {
+            background-color: $cl-primary;
+            i {
+                color: white;
+            }
+            p {
+                color: white;
+            }
+        }
     }
     &__cart {
+        display: flex;
+        margin-left: 4rem;
+        @include respond (tablet) {
+            margin-left: 0;
+        }
+        @include respond(phone) {
+            margin-right: .4rem;
+        }
+        cursor: pointer;
         &-icon {
-
+            position: relative;
+            padding: .8rem .8rem;
+            align-items: center;
+            i {
+                font-size: 2.2rem;
+                color: $cl-primary;
+            }
         }
         &-amount {
-            
+            border: .2rem solid $cl-orange;
+            display: flex;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: $cl-orange;
+            font-weight: 700;
+            font-size: 1.6rem;
+            background-color: $cl-white;
         }
     }
 }
