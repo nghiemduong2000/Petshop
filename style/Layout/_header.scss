@@ -165,7 +165,6 @@
             padding: 0;
             justify-content: space-between;
             margin: 0;
-            border-bottom: 1px solid rgba($cl-gray, .4);
             border-top: 1px solid rgba($cl-gray, .4);
         }
         &-item {
@@ -250,6 +249,10 @@
     &__benifits {
         display: flex;
         justify-content: space-evenly;
+        border-top: 1px solid rgba($cl-gray, .4);
+        @include respond(phone) {
+            display: none;
+        }
         &-item {
             display: flex;
             align-items: center;
@@ -259,6 +262,9 @@
             i {
                 font-size: 3.5rem;
                 margin-right: 1.6rem;
+                @include respond(tablet) {
+                    font-size: 2.8rem;
+                }
             }
             p {
                 width: 10rem;
@@ -287,6 +293,9 @@
             top: 50%;
             left: 9rem;
             transform: translateY(-50%);
+            @include respond(phone) {
+                left: 4rem;
+            }
             a {
                 width: 21rem;
                 font-size: 2.2rem;
@@ -296,11 +305,31 @@
                 i {
                     font-size: 1.8rem;
                     margin-left: 1rem;
+                    @include respond(tablet) {
+                        font-size: 1.6rem;
+                    }
+                }
+                @include respond (tablet) {
+                    width: 16rem;
+                    font-size: 1.8rem;
+                }
+                @include respond (phone) {
+                    width: 12rem;
+                    font-size: 1.2rem;
                 }
             }
         }
         &-logo {
             width: 30rem;
+            @include respond(md-desktop) {
+                width: 25rem;
+            }
+            @include respond(tablet) {
+                width: 20rem
+            }
+            @include respond(phone) {
+                width: 12rem;
+            }
         }
         &-slogan {
             font-size: 3.5rem;
@@ -308,10 +337,25 @@
             width: 45rem;
             text-transform: uppercase;
             &:nth-child(2) {
-                margin: 1.5rem 0 0; 
+                margin: 1.5rem 0 0;
+                @include respond(phone) {
+                    margin: .5rem 0 0;
+                }
             }
             &:nth-child(3) {
                 margin: 0 0 4rem;
+                @include respond(phone) {
+                    margin: 0 0 1rem;
+                }
+            }
+            @include respond(md-desktop) {
+                font-size: 2.8rem;
+            }
+            @include respond(tablet) {
+                font-size: 2.2rem;
+            }
+            @include respond(phone) {
+                font-size: 1.4rem;
             }
         }
         &-pre, &-next {
@@ -331,14 +375,34 @@
             &:hover {
                 background-color: rgba($cl-white, .6);
             }
+            @include respond(tablet) {
+                font-size: 3.5rem;
+            }
+            @include respond(phone) {
+                font-size: 2.5rem;
+                width: 3rem;
+                height: 3rem;
+            }
         }
         &-pre {
             left: 1rem;
             cursor: pointer;
+            @include respond(tablet) {
+                left: 0;
+            }
+            @include respond(phone) {
+                left: .5rem;
+            }
         }
         &-next {
             right: 1rem;
             cursor: pointer;
+            @include respond(tablet) {
+                right: 0;
+            }
+            @include respond(phone) {
+                right: .5rem;
+            }
         }
         &-dots {
             position: absolute;
@@ -356,12 +420,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include respond(tablet) {
+                width: 1.4rem;
+                height: 1.4rem;
+                margin: 1.2rem;
+            }
+            @include respond(tablet) {
+                width: 1rem;
+                height: 1rem;
+                margin: 1rem;
+            }
         }
         &-dot-inner {
             background-color: transparent;
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
+            @include respond(tablet) {
+                width: .8rem;
+                height: .8rem;
+            }
+            @include respond(phone) {
+                width: .6rem;
+                height: .6rem;
+            }
         }
         &-dot-active {
             background-color: $cl-primary;

@@ -176,7 +176,6 @@
   padding: 0;
   justify-content: space-between;
   margin: 0;
-  border-bottom: 1px solid rgba(85, 85, 85, 0.4);
   border-top: 1px solid rgba(85, 85, 85, 0.4);
 }
 .header__nav-item {
@@ -260,6 +259,12 @@
 .header__benifits {
   display: flex;
   justify-content: space-evenly;
+  border-top: 1px solid rgba(85, 85, 85, 0.4);
+}
+@media (max-width: 414px) {
+  .header__benifits {
+    display: none;
+  }
 }
 .header__benifits-item {
   display: flex;
@@ -271,6 +276,11 @@
 .header__benifits-item i {
   font-size: 3.5rem;
   margin-right: 1.6rem;
+}
+@media (max-width: 768px) {
+  .header__benifits-item i {
+    font-size: 2.8rem;
+  }
 }
 .header__benifits-item p {
   width: 10rem;
@@ -299,6 +309,11 @@
   left: 9rem;
   transform: translateY(-50%);
 }
+@media (max-width: 414px) {
+  .header__banner-content {
+    left: 4rem;
+  }
+}
 .header__banner-content a {
   width: 21rem;
   font-size: 2.2rem;
@@ -310,8 +325,40 @@
   font-size: 1.8rem;
   margin-left: 1rem;
 }
+@media (max-width: 768px) {
+  .header__banner-content a i {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__banner-content a {
+    width: 16rem;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-content a {
+    width: 12rem;
+    font-size: 1.2rem;
+  }
+}
 .header__banner-logo {
   width: 30rem;
+}
+@media (max-width: 1440px) {
+  .header__banner-logo {
+    width: 25rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__banner-logo {
+    width: 20rem;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-logo {
+    width: 12rem;
+  }
 }
 .header__banner-slogan {
   font-size: 3.5rem;
@@ -322,8 +369,33 @@
 .header__banner-slogan:nth-child(2) {
   margin: 1.5rem 0 0;
 }
+@media (max-width: 414px) {
+  .header__banner-slogan:nth-child(2) {
+    margin: 0.5rem 0 0;
+  }
+}
 .header__banner-slogan:nth-child(3) {
   margin: 0 0 4rem;
+}
+@media (max-width: 414px) {
+  .header__banner-slogan:nth-child(3) {
+    margin: 0 0 1rem;
+  }
+}
+@media (max-width: 1440px) {
+  .header__banner-slogan {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__banner-slogan {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-slogan {
+    font-size: 1.4rem;
+  }
 }
 .header__banner-pre, .header__banner-next {
   font-size: 4.5rem;
@@ -343,13 +415,45 @@
 .header__banner-pre:hover, .header__banner-next:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
+@media (max-width: 768px) {
+  .header__banner-pre, .header__banner-next {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-pre, .header__banner-next {
+    font-size: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .header__banner-pre {
   left: 1rem;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .header__banner-pre {
+    left: 0;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-pre {
+    left: 0.5rem;
+  }
+}
 .header__banner-next {
   right: 1rem;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header__banner-next {
+    right: 0;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-next {
+    right: 0.5rem;
+  }
 }
 .header__banner-dots {
   position: absolute;
@@ -368,11 +472,37 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .header__banner-dot {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__banner-dot {
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem;
+  }
+}
 .header__banner-dot-inner {
   background-color: transparent;
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .header__banner-dot-inner {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+@media (max-width: 414px) {
+  .header__banner-dot-inner {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
 }
 .header__banner-dot-active {
   background-color: #0094DA;
