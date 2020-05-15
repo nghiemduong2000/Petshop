@@ -1,0 +1,81 @@
+.cart__table-wrap {
+    text-align: center;
+    .cart__table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        &, th, td {
+            border-bottom: 1px solid rgba($cl-gray, .4);
+        }
+        th {
+            font-size: 1.8rem;
+            padding: 2rem 0;
+            color: $cl-gray;
+        }
+        td {
+            padding: 2rem 0;
+        }
+        &-item {
+            &-img {
+                max-width: 12rem;
+                margin-bottom: .5rem;
+            }
+            &-name {
+                margin: 0;
+                font-weight: 500;
+                font-size: 1.4rem;
+            }
+        }
+        &-retail,&-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $cl-primary;
+        }
+        &-amount {
+            font-size: 1.8rem;
+            font-weight: 500;
+            border: 1px solid $cl-primary;
+            width: 7.5rem;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            height: 2.5rem;
+            border-radius: .5rem;
+            overflow: hidden;
+            &-subtract, &-plus {
+                width: 2.5rem;
+                background-color: $cl-primary;
+                color: $cl-white;
+                cursor: pointer;
+            }
+            &-plus {
+                margin-right: -1px;
+            }
+            &-disable {
+                background-color: $cl-gray;
+            }
+        }
+        &-trash {
+            i {
+                font-size: 1.8rem;
+                cursor: pointer;
+                transition: all .2s;
+                color: $cl-gray-light;
+                &:hover {
+                    color: #D5493D;
+                }
+            }
+        }
+        &-btn-wrap {
+            margin-bottom: 2rem;
+            a {
+                margin: 0 1.5rem;
+            }
+        }
+    }
+    h3 {
+        font-size: 2.2rem;
+        color: $cl-primary;
+        margin: 3rem;
+    }
+}

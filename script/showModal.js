@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+const showModal = () => {
     let showModal = document.querySelectorAll('.showModal');
     let overlay = document.querySelectorAll('.modal__overlay');
     let modal = document.querySelectorAll('.modal');
@@ -33,4 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.style.overflowY = "auto";
         }
     }
-})
+}
+
+export {showModal};

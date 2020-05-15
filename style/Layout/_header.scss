@@ -3,7 +3,7 @@
 .header {
     &__top {
         display: flex;
-        padding: 2rem 0;
+        padding: 2rem 3.5rem;
         align-items: center;
         @include respond(tablet){
             justify-content: space-between;
@@ -154,6 +154,217 @@
             font-weight: 700;
             font-size: 1.6rem;
             background-color: $cl-white;
+        }
+    }
+    &__nav {
+        @include respond(tablet) {
+            display: none;
+        }
+        &-list {
+            display: flex;
+            padding: 0;
+            justify-content: space-between;
+            margin: 0;
+            border-bottom: 1px solid rgba($cl-gray, .4);
+            border-top: 1px solid rgba($cl-gray, .4);
+        }
+        &-item {
+            list-style: none;
+            position: relative;
+            z-index: 4;
+            &:nth-child(2):hover .header__nav-child, &:nth-child(3):hover .header__nav-child, &:nth-child(4):hover .header__nav-child, &:nth-child(2):active .header__nav-child, &:nth-child(3):active .header__nav-child, &:nth-child(4):active .header__nav-child {
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover {
+                background-color: $cl-primary-light;
+            }
+        }
+        &-link {
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-size: 2.2rem;
+            color: $cl-primary;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all .2s;
+            @include respond(md-desktop) {
+                font-size: 1.8rem;
+                padding: 1rem 2rem;
+            }
+            i {
+                font-size: 1.4rem;
+                margin-left: .6rem;
+            }
+        }
+        &-child {
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            padding: 1rem 0;
+            width: 55rem;
+            display: flex;
+            flex-flow: column wrap;
+            height: 20rem;
+            background-color: $cl-primary-light;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s;
+            &-item {
+                list-style: none;
+                display: flex;
+                flex: 1 1 2rem;
+            }
+            &-link {
+                padding: 1rem 2.5rem;
+                width: 100%;
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: $cl-primary;
+                font-weight: 500;
+                &:hover {
+                    i {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    span {
+                        transform: translateX(0);
+                    }
+                }
+                i {
+                    margin-right: .5rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .2s;
+                }
+                span {
+                    transform: translateX(-2rem);
+                    display: inline-block;
+                    transition: all .2s;
+                }
+            }
+        }
+    }
+    &__benifits {
+        display: flex;
+        justify-content: space-evenly;
+        &-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            color: rgba($cl-gray, .8);
+            font-weight: 500;
+            i {
+                font-size: 3.5rem;
+                margin-right: 1.6rem;
+            }
+            p {
+                width: 10rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+    &__banner {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        &-slide {
+            width: 100%;
+            display: flex;
+            position: relative;
+            transition: all .8s ease-in-out;
+        }
+        &-img {
+            display: block;
+        }
+        &-item {
+            position: relative;
+        }
+        &-content {
+            position: absolute;
+            top: 50%;
+            left: 9rem;
+            transform: translateY(-50%);
+            a {
+                width: 21rem;
+                font-size: 2.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 1.8rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
+        &-logo {
+            width: 30rem;
+        }
+        &-slogan {
+            font-size: 3.5rem;
+            font-weight: bold;
+            width: 45rem;
+            text-transform: uppercase;
+            &:nth-child(2) {
+                margin: 1.5rem 0 0; 
+            }
+            &:nth-child(3) {
+                margin: 0 0 4rem;
+            }
+        }
+        &-pre, &-next {
+            font-size: 4.5rem;
+            color: $cl-primary;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            align-items: center;
+            border-radius: 50%;
+            transition: all .2s;
+            &:hover {
+                background-color: rgba($cl-white, .6);
+            }
+        }
+        &-pre {
+            left: 1rem;
+            cursor: pointer;
+        }
+        &-next {
+            right: 1rem;
+            cursor: pointer;
+        }
+        &-dots {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        &-dot {
+            margin: 2rem 2rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: $cl-white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-dot-inner {
+            background-color: transparent;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+        }
+        &-dot-active {
+            background-color: $cl-primary;
         }
     }
 }

@@ -18,6 +18,11 @@
         background-color: $cl-primary-light;
         border: 2px solid $cl-primary;
         color: $cl-primary;
+        padding: .3rem 2rem;
+        &:hover {
+            background-color: $cl-primary;
+            color: $cl-white;
+        }
     }
     &--rounded {
         border-radius: .8rem;
