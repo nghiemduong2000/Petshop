@@ -1,0 +1,122 @@
+.lsp {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5rem;
+    &__slide {
+        width: 100%;
+        transition: all .4s ease-in-out;
+        display: none;
+        &--active {
+            display: flex;
+        }
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        width: 25.5rem;
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+}
+.product-template {
+    border: .1rem solid $cl-gray-light;
+    border-radius: .8rem;
+    text-align: center;
+    padding: 2rem;
+    text-decoration: none;
+    color: $cl-gray;
+    position: relative;
+    &:hover &__like{
+        opacity: 1;
+        visibility: visible;
+    }
+    &__persale {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 6rem;
+        height: 4rem;
+        background-color: $cl-primary;
+        border-radius: .8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: $cl-white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+    &__like {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .8rem;
+        background-color: $cl-gray;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s;
+        cursor: pointer;
+        &--active {
+            animation: upScale .3s ease-in forwards;
+        }
+        i {
+            font-size: 2rem;
+            color: $cl-white;
+        }
+    }
+    &__img {
+        text-align: center;
+        text-decoration: none;
+        img {
+            height: 18rem;
+        }
+    }
+    &__rating {
+        padding: 2rem 0 0;
+        i {
+            font-size: 1.2rem;
+            color: $cl-orange;
+        }
+    }
+    &__name {
+        text-decoration: none;
+        font-weight: 700;
+        color: $cl-gray;
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 1rem;
+        display: block;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin: 0 1rem 1rem 1rem;
+        span {
+            margin: 0 1rem;
+        }
+    }
+    &__cost {
+        font-size: 1.8rem;
+        margin: 0;
+        color: $cl-primary;
+    }
+    &__saleoff {
+        margin: 0;
+        font-size: 1.4rem;
+        text-decoration: line-through;
+    }
+    button {
+        width: 100%;
+    }
+}
