@@ -1,14 +1,15 @@
 .join-us {
     position: relative;
+    margin-bottom: 5rem;
     &__banner {
         width: 100%;
     }
     &__inner {
-        width: 40rem;
+        width: 45rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 7rem;
+        right: 5rem;
         text-align: center;
     }
     &__title {
@@ -28,6 +29,8 @@
         font-size: $fs-18;
         color: $cl-white;
         margin: 1.8rem 0 2.2rem;
+        line-height: 2.5rem;
+        text-align: left;
     }
     a {
         font-size: $fs-22;

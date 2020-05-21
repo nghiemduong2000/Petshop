@@ -1,0 +1,38 @@
+.handbook {
+    &__line {
+        width: 26.2rem;
+    }
+    &__tab {
+        color: $cl-primary;
+    }
+    &__slide {
+        width: 100%;
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding: 2rem;
+        border-radius: .8rem;
+        border: 1px solid $cl-gray-light;
+    }
+    &__item-wrap {
+        text-align: center;
+        & > a {
+            width: 100%;
+            display: block;
+        }
+    }
+    i {
+        font-size: 10rem;
+        color: $cl-primary;
+    }
+    &__title {
+        font-size: $fs-22;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-size: $fs-14;
+        line-height: 2rem;
+    }
+}

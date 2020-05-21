@@ -1,0 +1,19 @@
+.hot-branding {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        width: 24rem;
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+    &__link {
+        width: 100%;
+        display: block;
+    }
+    &__img {
+        width: 100%;
+    }
+}

@@ -1262,16 +1262,17 @@ body {
 }
 .join-us {
   position: relative;
+  margin-bottom: 5rem;
 }
 .join-us__banner {
   width: 100%;
 }
 .join-us__inner {
-  width: 40rem;
+  width: 45rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 7rem;
+  right: 5rem;
   text-align: center;
 }
 .join-us__title {
@@ -1291,6 +1292,8 @@ body {
   font-size: 1.8rem;
   color: white;
   margin: 1.8rem 0 2.2rem;
+  line-height: 2.5rem;
+  text-align: left;
 }
 .join-us a {
   font-size: 2.2rem;
@@ -1308,6 +1311,200 @@ body {
   font-size: 1.8rem;
   margin-left: 1rem;
   transition: all 0.2s;
+}
+
+.hot-branding__list {
+  display: flex;
+  align-items: center;
+}
+.hot-branding__item {
+  width: 24rem;
+}
+.hot-branding__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.hot-branding__link {
+  width: 100%;
+  display: block;
+}
+.hot-branding__img {
+  width: 100%;
+}
+
+.handbook__line {
+  width: 26.2rem;
+}
+.handbook__tab {
+  color: #0094DA;
+}
+.handbook__slide {
+  width: 100%;
+}
+.handbook__list {
+  display: flex;
+}
+.handbook__item {
+  padding: 2rem;
+  border-radius: 0.8rem;
+  border: 1px solid #C4C4C4;
+}
+.handbook__item-wrap {
+  text-align: center;
+}
+.handbook__item-wrap > a {
+  width: 100%;
+  display: block;
+}
+.handbook i {
+  font-size: 10rem;
+  color: #0094DA;
+}
+.handbook__title {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.handbook__text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.news__list {
+  display: flex;
+  align-items: center;
+}
+.news__item {
+  width: 24rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 1px solid #C4C4C4;
+}
+.news__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.news__link {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+.news__img {
+  width: 100%;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.news__text {
+  padding: 1rem;
+  color: #555;
+}
+.news__title {
+  font-size: 1.8rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 20rem;
+  overflow: hidden;
+  margin: 0 auto 0.5rem;
+}
+.news__desc {
+  font-size: 1.4rem;
+  height: 4rem;
+  line-height: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 0;
+}
+
+.footer {
+  background-color: #0094DA;
+  padding: 5rem 0;
+}
+.footer__title {
+  text-decoration: none;
+}
+.footer__title > h3 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: white;
+  margin: 1rem 0;
+}
+.footer__items-list {
+  padding: 0;
+  margin: 0;
+}
+.footer__items-item {
+  list-style: none;
+  text-align: center;
+}
+.footer__items-item a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: white;
+  padding: 0.5rem 0;
+  display: block;
+}
+.footer__items-social {
+  display: flex;
+  width: 24rem;
+  margin: 1rem auto 0;
+}
+.footer__items-icon {
+  color: white;
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  margin: 0 1rem;
+}
+.footer__items-icon i {
+  font-size: 2rem;
+}
+.footer__items-icon:nth-child(1) {
+  background-color: #D5493D;
+}
+.footer__items-icon:nth-child(2) {
+  background-color: #3A5998;
+}
+.footer__items-icon:nth-child(3) {
+  background-color: #D5493D;
+}
+.footer__items-icon:nth-child(4) {
+  background: linear-gradient(to bottom, #8457CD, #D32E96, #E46258, #FFD879);
+}
+.footer__copyright {
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+  margin: 8rem auto 0;
+}
+
+.scroll-top {
+  text-decoration: none;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #0094DA;
+  border-radius: 50%;
+  background-color: #f0f5f7;
+  font-size: 3rem;
+  color: #0094DA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 15rem;
+  right: 12rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+.scroll-top--active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=main.css.map */

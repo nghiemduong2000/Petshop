@@ -1,0 +1,23 @@
+.scroll-top {
+    text-decoration: none;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid $cl-primary;
+    border-radius: 50%;
+    background-color: $cl-primary-light;
+    font-size: 3rem;
+    color: $cl-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 15rem;
+    right: 12rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
