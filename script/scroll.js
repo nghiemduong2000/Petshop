@@ -2,7 +2,6 @@ const scroll = () => {
     const scrollBtn = document.querySelector('.scroll-top');
     let flag = "less 200";
     window.addEventListener("scroll", function() {
-        console.log(window.pageYOffset);
         if (window.pageYOffset > 200) {
             if (flag === "less 200") {
                 flag = "bigger 200";
