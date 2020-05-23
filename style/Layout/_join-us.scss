@@ -11,6 +11,13 @@
         transform: translateY(-50%);
         right: 5rem;
         text-align: center;
+        @include respond(md-desktop) {
+            right: 3rem;
+        }
+        @include respond(tablet) {
+            right: 2rem;
+            width: 36rem;
+        }
     }
     &__title {
         align-items: center;
@@ -19,10 +26,16 @@
             margin: 0;
             display: inline;
             color: $cl-white;
+            @include respond(tablet) {
+                font-size: $fs-22;
+            }
         }
         img {
             height: 2.2rem;
             margin-left: .8rem;
+            @include respond(tablet) {
+                height: 1.6rem;
+            }
         }
     }
     &__text {
@@ -31,6 +44,20 @@
         margin: 1.8rem 0 2.2rem;
         line-height: 2.5rem;
         text-align: left;
+        @include respond(md-desktop) {
+            margin: 1.4rem auto 1.6rem;
+        }
+        @include respond(tablet) {
+            font-size: $fs-14;
+            width: 32rem;
+            height: 6rem;
+            line-height: 2rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            text-align: center;
+        }
     }
     a {
         font-size: $fs-22;
@@ -40,6 +67,10 @@
         margin: 0 auto;
         align-items: center;
         justify-content: center;
+        @include respond(tablet) {
+            font-size: $fs-18;
+            padding: .4rem;
+        }
         &:hover i {
             transform: translateX(.5rem);
         }
@@ -47,6 +78,9 @@
             font-size: $fs-18;
             margin-left: 1rem;
             transition: all .2s;
+            @include respond(tablet) {
+                font-size: $fs-14;
+            }
         }
     }
 }

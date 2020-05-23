@@ -31,6 +31,9 @@
     &__line {
         width: 323px;
         color: $cl-primary;
+        @include respond(md-desktop) {
+            width: 270px;
+        }
     }
     &__pet {
         img {

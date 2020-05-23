@@ -1,7 +1,16 @@
 .lsp {
     width: 100%;
-    overflow: hidden;
     margin-bottom: 5rem;
+    &__wrap-slide {
+        overflow-x: hidden;
+        @include respond (md-desktop) {
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
     &__slide {
         width: 100%;
         transition: all .4s ease-in-out;
@@ -14,9 +23,10 @@
         display: flex;
     }
     &__item {
-        width: 25.5rem;
-        &:not(:last-child) {
-            margin-right: 3rem;
+        width: 24.75rem;
+        margin: 0 1.5rem;
+        @include respond(tablet) {
+            width: 45%;
         }
     }
 }
@@ -78,6 +88,9 @@
         text-decoration: none;
         img {
             height: 18rem;
+            @include respond(md-desktop) {
+                height: 14rem;
+            }
         }
     }
     &__rating {

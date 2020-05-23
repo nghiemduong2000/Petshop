@@ -1,6 +1,9 @@
 .handbook {
     &__line {
         width: 26.2rem;
+        @include respond(md-desktop) {
+            width: 220px;
+        }
     }
     &__tab {
         color: $cl-primary;
@@ -10,11 +13,23 @@
     }
     &__list {
         display: flex;
+        @include respond(tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__item {
         padding: 2rem;
         border-radius: .8rem;
         border: 1px solid $cl-gray-light;
+        @include respond(md-desktop) {
+            padding: 1.5rem;
+        }
+        &:nth-child(1), &:nth-child(2) {
+            @include respond(tablet) {
+                margin-bottom: 2rem;
+            }
+        } 
     }
     &__item-wrap {
         text-align: center;

@@ -1,11 +1,15 @@
 .btn {
-    font-size: 1.8rem;
+    font-size: $fs-18;
     font-weight: 700;
     text-decoration: none;
     padding: .5rem 2rem;
     font-family: "Quicksand", sans-serif;
     cursor: pointer;
     transition: all .2s;
+    @include respond(md-desktop) {
+        font-size: $fs-14;
+        padding: .8rem 2rem;
+    }
     &--primary {
         background-color: $cl-primary;
         color: white;

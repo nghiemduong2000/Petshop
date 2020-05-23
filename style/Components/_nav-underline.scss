@@ -6,13 +6,13 @@
     }
     &::after {
         content: "";
-            position: absolute;
-            bottom: -.3rem;
-            left: 0;
-            width: 100%;
-            height: .3rem;
-            background-color: $cl-gray-light;
-            border-radius: .4rem;
+        position: absolute;
+        bottom: -.3rem;
+        left: 0;
+        width: 100%;
+        height: .3rem;
+        background-color: $cl-gray-light;
+        border-radius: .4rem;
     }
     &__item {
         padding: 1rem 1.5rem;
@@ -26,6 +26,9 @@
         position: relative;
         transition: all .2s;
         z-index: 1;
+        @include respond(md-desktop) {
+            font-size: 1.8rem;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -37,6 +40,9 @@
             border-radius: .4rem;
             opacity: 0;
             transition: all .2s;
+            @include respond(md-desktop) {
+                height: .2rem;
+            }
         }
         &:not(.is-active):hover::after {
             opacity: 1;
@@ -55,12 +61,18 @@
         transition: all .2s;
         z-index: 1;
         border-radius: .4rem;
+        @include respond(md-desktop) {
+            height: .2rem;
+        }
     }
     &__handle {
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        @include respond(md-desktop) {
+            display: none;
+        }
         span {
             display: inline-block;
             padding: 1rem;
